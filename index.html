@@ -35,27 +35,36 @@
                 <p class="welcome-text">And We're taking it seriously...</p>
             </div>
 
+            <div class="member member-flex">
+                <div class="member-login-bg member-item member-login-flex">
+                <a class="member-link login" href="http://">login</a>
+            </div>
+            <div class="member-register-bg member-item member-register-flex">
+                <a class="member-link register" href="http://">register</a>
+            </div>
+        </div>
+
     </header>
 
     <main class="main">
-        <section class="member member-flex">
-            <div class="member-login-bg member-item member-login-flex">
-            <a class="member-link login" href="http://">login</a>
-        </div>
-        <div class="member-register-bg member-item member-register-flex">
-            <a class="member-link register" href="http://">register</a>
-        </div>
-        </section>
 
         <section class="domain domain-container">
             <h4 class="domain-caption">Would you like to buy a new domain ?</h4>
             <p class="domain-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor mauris ac nulla interdum, id molestier.</p>
 
-            <div class="input input-container input-flex">
-                <div>www.</div>
-                <div>What do you want?</div>
-                <div>.com</div>
-            </div>
+        
+                <form class="domain-selection input input-container input-flex" action="/action_page.php">
+                    <label class="domain__label" for="domain">www.</label>
+                    <input class="domain__input" type="text" id="fname" name="domain" placeholder="What do you want?" required="required">
+                    <div class="styled-select">
+                    <select class="domain__select" name="country">
+                      <option class="domain__option" value=".com" selected="selected">.com</option>
+                      <option class="domain__option" value=".net">.net</option>
+                    </select>
+                </div>
+                  
+                  </form>
+            
 
             <div class="price-container">
                 <ul class="domain-price domain-price-flex com">
@@ -78,11 +87,16 @@
             <div class="packages-container packages-flex">
                 <div class="package-type package-basic">
                     <div class="package-container">
-                        <div class="package-basic-container">
+                        <div class="package-basic-icon-border">
+                                <div class='package-dot-start package-dot-basic-start-color'>
+                                      </div>
                         <i class="fas fa-anchor package-basic__icon"></i>
+                        <div class='package-dot-finish'>
+                            <span class="package-basic-dot-finish"></span>
+                            </div>
                     </div>
 
-                        <h4 class="package-basic__name">Basic package</h4>
+                        <h4 class="package__name">Basic package</h4>
                         <div class="package-features">
                             <div class="package-features-content">
                                 <p class="package-feature__name">Disk Space (GB)</p>
@@ -117,8 +131,15 @@
                 </div>
                 <div class="package-type package-normal">
                         <div class="package-container">
+                            <div class="package-normal-icon-border">
+                                    <div class='package-dot-start package-dot-normal-start-color'>
+                                        </div>
                         <i class="fas fa-star-half-alt package-normal__icon"></i>
-                        <h4 class="package-basic__name">Normal package</h4>
+                        <div class='package-dot-finish'>
+                            <span class="package-normal-dot-finish"></span>
+                            </div>
+                    </div>
+                        <h4 class="package__name">Normal package</h4>
                         <div class="package-features">
                                 <div class="package-features-content">
                                     <p class="package-feature__name">Disk Space (GB)</p>
@@ -153,8 +174,15 @@
                 </div>
                 <div class="package-type package-big">
                         <div class="package-container">
+                                <div class="package-big-icon-border">
+                                        <div class='package-dot-start package-dot-big-start-color'>
+                                            </div>
                         <i class="fas fa-star package-big__icon"></i>
-                        <h4 class="package-basic__name">Big package</h4>
+                        <div class='package-dot-finish'>
+                            <span class="package-big-dot-finish"></span>
+                            </div>
+                        </div>
+                        <h4 class="package__name">Big package</h4>
                         <div class="package-features">
                                 <div class="package-features-content">
                                     <p class="package-feature__name">Disk Space (GB)</p>
@@ -189,8 +217,10 @@
                 </div>
                 <div class="package-type package-biggest">
                         <div class="package-container">
+                            <div class="package-biggest-icon-border">
                         <i class="far fa-gem package-biggest__icon"></i>
-                        <h4 class="package-basic__name">Biggest package</h4>
+                    </div>
+                        <h4 class="package__name">Biggest package</h4>
                         <div class="package-features">
                                 <div class="package-features-content">
                                     <p class="package-feature__name">Disk Space (GB)</p>
@@ -238,9 +268,9 @@
         </article>
 
         <div class="team-area team-area-flex">
-                <article>
+                <article class="team-block">
                         <figure team-person>
-                          <img class="team-person-image" src="img/team-member-jonny.jpg" alt="" height="90" width="90">
+                          <img class="team-person-image" src="img/team-member-jonny.jpg" alt="Jonny" height="90" width="90">
                         </figure>
                         <figcaption>
                           <h6 class="team-member-name">Jonny Doe</h6>
@@ -252,9 +282,9 @@
                           </ul>
                         </figcaption>
                 </article>
-                <article>
+                <article class="team-block">
                         <figure team-person>
-                          <img class="team-person-image" src="img/team-member-john.jpg" alt="" height="90" width="90">
+                          <img class="team-person-image" src="img/team-member-john.jpg" alt="John" height="90" width="90">
                         </figure>
                         <figcaption>
                           <h6 class="team-member-name">John Doe</h6>
@@ -266,9 +296,9 @@
                           </ul>
                         </figcaption>
                 </article>
-                <article>
+                <article class="team-block">
                         <figure team-person>
-                          <img class="team-person-image" src="img/team-member-johnathan.jpg" alt="" height="90" width="90">
+                          <img class="team-person-image" src="img/team-member-johnathan.jpg" alt="Johnathan" height="90" width="90">
                         </figure>
                         <figcaption>
                           <h6 class="team-member-name">Johnathan Doe</h6>
@@ -289,7 +319,7 @@
             <article class="comments-container">
                             <blockquote>
                               <p class="comments-content">“Suspendisse tempor turpis odio, sit amet cursus leo consequat non. Maecenas lacinia faucibus enimqui
-                                    interdum dolor pulvinar vitae.” </p>
+                                    interdum dolor pulvinar vitae.”</p>
                             </blockquote>
                             <div class="comments-author-container">
                             <h5 class="comments-author">John Doe</h5>
@@ -323,7 +353,7 @@
                 </article>
                 <article class="functions-column">
                         <div class="functions-icon-container functions-icon-arrows-alt">
-                    <i class="functions-icon fas fa-arrows-alt"></i>
+                    <i class="functions__icon fas fa-arrows-alt"></i>
                 </div>
                     <h5 class="functions-name">Domain Transfer</h5>
                     <p class="functions-description">Nulla dapibus neque augue, quis 
@@ -331,7 +361,7 @@
                 </article>
                 <article class="functions-column">
                         <div class="functions-icon-container functions-icon-comments">
-                    <i class="functions-icon fas fa-comments"></i>
+                    <i class="functions__icon fas fa-comments"></i>
                 </div>
                     <h5 class="functions-name">Live Support</h5>
                     <p class="functions-description">Nulla dapibus neque augue, quis 
